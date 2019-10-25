@@ -19,7 +19,7 @@
     "ssl:ro",
     "config:rw"
   ],
-  "name": "ESPHome (dev)",
+  "name": "ESPHome (devc)",
   "options": {
     "esphome_version": "dev"
   },
