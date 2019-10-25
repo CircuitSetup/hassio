@@ -8,8 +8,8 @@ declare esphome_version
 
 if bashio::config.has_value 'esphome_version'; then
     esphome_version=$(bashio::config 'esphome_version')
-    full_url="git+https://github.com/CircuitSetup/esphome@test"
+    full_url="https://github.com/CircuitSetup/esphome@test"
     bashio::log.info "Installing esphome version '${esphome_version}' (${full_url})..."
-    pip3 install -U --no-cache-dir "${full_url}" \
+    pip3 install -U --no-cache-dir git+"${full_url}" \
       || bashio::exit.nok "Failed installing esphome pinned version."
 fi
